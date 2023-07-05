@@ -15,10 +15,20 @@
   örnek input:  ""
   örnek output: ""
 */
-
-function dosyaAdiniBul(/* kodlar buraya */) {
-  // kodlar buraya
+ 
+function dosyaAdiniBul(text) {
+  let pstn = text.lastIndexOf("/");
+  let part = text.substring(pstn+1);
+  return part
 }
+
+
+ 
+ console.log(dosyaAdiniBul("C:/Users/johnsmith/Music/Beethoven_5.mp3"))
+ 
+ 
+ 
+ 
 
 /*
   GÖREV 2
@@ -38,10 +48,10 @@ function dosyaAdiniBul(/* kodlar buraya */) {
   örnek output: 104
 */
 
-function ortalamaBul(/* kodlar buraya */) {
-  // kodlar buraya
-}
-
+function ortalamaBul(numbers) {
+  if (numbers.length === 0) return null;
+  return numbers.reduce((total,sayi) => total+sayi) /numbers.length
+  } 
 /*
   GÖREV 3
   - Input:  Bir sayı arrayini ve ortalama bulmaya yarayacak bir fonksiyonu parametre olarak alacak bir fonksiyon oluştur.
@@ -62,10 +72,19 @@ function ortalamaBul(/* kodlar buraya */) {
   örnek output: [109, 216, 288, 143, 185, 194]
 */
 
-function ortalamadanBuyukleriBul(/* kodlar buraya */) {
-  // kodlar buraya
-}
-
+function ortalamadanBuyukleriBul(function1,arr) {
+  const arr2=[];
+  const avg = function1(arr);
+  for (let index = 0; index < arr.length; index++) {
+    if (arr[index] >= avg){
+    arr2.push(arr[index])    
+  }}
+  return arr2
+    
+  }
+console.log(ortalamadanBuyukleriBul(ortalamaBul, [1, 2, 3, 4,-1000000]))
+  
+console.log(ortalamaBul([50, -26, 153, 7,51,2,2]))
 /* !!!! Burdan aşağısını değiştirmeyin !!!! */
 function as() {
   console.log("Kodlar sorunsuz çalışıyor!");
