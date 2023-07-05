@@ -72,9 +72,9 @@ function ortalamaBul(numbers) {
   örnek output: [109, 216, 288, 143, 185, 194]
 */
 
-function ortalamadanBuyukleriBul(function1,arr) {
+function ortalamadanBuyukleriBul(cb,arr) {
   const arr2=[];
-  const avg = function1(arr);
+  const avg = cb(arr);
   for (let index = 0; index < arr.length; index++) {
     if (arr[index] >= avg){
     arr2.push(arr[index])    
@@ -84,7 +84,7 @@ function ortalamadanBuyukleriBul(function1,arr) {
   }
 console.log(ortalamadanBuyukleriBul(ortalamaBul, [1, 2, 3, 4,-1000000]))
   
-console.log(ortalamaBul([50, -26, 153, 7,51,2,2]))
+
 /* !!!! Burdan aşağısını değiştirmeyin !!!! */
 function as() {
   console.log("Kodlar sorunsuz çalışıyor!");
