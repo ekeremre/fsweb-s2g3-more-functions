@@ -72,7 +72,8 @@ function ortalamaBul(numbers) {
   örnek output: [109, 216, 288, 143, 185, 194]
 */
 
-function ortalamadanBuyukleriBul(cb,arr) {
+function ortalamadanBuyukleriBul(arr,cb) {
+  if (arr.length === 0) return null;
   const arr2=[];
   const avg = cb(arr);
   for (let index = 0; index < arr.length; index++) {
@@ -82,7 +83,7 @@ function ortalamadanBuyukleriBul(cb,arr) {
   return arr2
     
   }
-console.log(ortalamadanBuyukleriBul(ortalamaBul, [1, 2, 3, 4,-1000000]))
+console.log(ortalamadanBuyukleriBul([1, 2, 3, 4,-1000000],ortalamaBul))
   
 
 /* !!!! Burdan aşağısını değiştirmeyin !!!! */
